@@ -72,6 +72,42 @@ you can restrict the key bindings to command mode like this:
 
     { "keys": [" ", "n"], "command": "create_file_from_template", "context": [{"key": "setting.command_mode"}] }
 
+## New Features
+
+- add **time** and **date** variables,
+  
+  > record file creation time
+  > 
+``` json
+  "creation_time": {
+    "day": "%d",
+    "month": "%m",
+    "year": "%Y",
+    "short_weekdayname": "%a",
+    "weekdayname": "%A",
+    "short_monthname": "%b",
+    "date": "%d/%m/%Y",
+    "time": "%H:%M:%S"
+  }
+```
+
+  > use `$day`, `$date`, `$time`, ... in your templates.
+
+- add customizable **attrs** variable,
+  
+  > add custom variables
+  > 
+``` json
+  "attrs": {
+    "author": "Your Name",
+    "company": "Your Company",
+    "email": "you@example.org",
+    "github": "github.com/you",
+    "foo": "bar"
+  }
+```
+
+  > use `$author`, `$company`, `$email`, `$github`, `$foo` in your templates.
 
 ## Thanks
 
