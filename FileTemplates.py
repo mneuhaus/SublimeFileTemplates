@@ -2,7 +2,6 @@ import os, time, re
 import sublime
 import sublime_plugin
 import glob
-import os
 from xml.etree import ElementTree
 
 current_path = None
@@ -25,6 +24,8 @@ class CreateFileFromTemplateCommand(sublime_plugin.WindowCommand):
             os.makedirs(os.path.dirname(path))
 
         open(path, 'w')
+
+        self.other_input()
 
         global template
         template = {
@@ -195,6 +196,16 @@ class CreateFileFromTemplateCommand(sublime_plugin.WindowCommand):
             return
         else:
             self.create_and_open_file(full_path)
+
+    def other_input(self):
+        attrs = self.get_setting("attrs")
+        if attrs:
+            self.variables.update(attrs)
+
+        timepatterns = self.get_setting("creation_time")
+        if timepatterns:
+            for key, pattern in timepatterns.iteritems():
+                self.variables[key] = time.strftime(pattern)
 
     def show_quick_panel(self, options, done):
         sublime.set_timeout(lambda: self.window.show_quick_panel(options, done), 10)

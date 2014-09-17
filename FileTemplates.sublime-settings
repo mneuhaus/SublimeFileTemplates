@@ -1,5 +1,21 @@
 {
   "excluded_dir_patterns": [
     "tmp", "|.git", "|.svn"
-  ]
+  ],
+  "attrs": {
+    "author": "author",
+    "company": "company",
+    "email": "email",
+    "github": "github"
+  },
+  "creation_time": {
+    "day": "%d",
+    "month": "%m",
+    "year": "%Y",
+    "short_weekdayname": "%a",
+    "weekdayname": "%A",
+    "short_monthname": "%b",
+    "date": "%d/%m/%Y",
+    "time": "%H:%M:%S"
+  }
 }
