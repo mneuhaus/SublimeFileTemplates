@@ -1,0 +1,12 @@
+<template>
+    <!-- Or you set a path to a seperate Template File here -->
+    <file>java.java</file>
+
+    <!-- The filename for the new File, you can use the arguments to make it dynamic -->
+    <filename>$name.java</filename>
+
+    <!-- Optional: Add as much arguments as you need, they will be asked in the order specified -->
+    <arguments>
+        <name>Name (without extension):</name>
+    </arguments>
+</template>
