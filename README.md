@@ -3,7 +3,6 @@
 This Package enables you and other Package Developers to include File Templates.
 A File Template is basically a snippet, a filename, a default path and optional arguments.
 
-
 # Demo
 
 http://www.youtube.com/embed/M4isYen7_Z4
