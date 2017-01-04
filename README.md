@@ -1,3 +1,5 @@
+**This Repository is not actively maintained, Pull-Requests are welcome and will be merged if they make sense.**
+
 # File Templates for SublimeText 2
 
 This Package enables you and other Package Developers to include File Templates.
